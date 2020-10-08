@@ -19,7 +19,7 @@ class data_analyze:
             # for target in self.target_item:
             #     df.boxplot(column=target,by=[item],ax=axes[0][0])
             df.boxplot(column='R', by=[item], ax=axes[0][0])
-            df.boxplot(column='P', by=[item], ax=axes[0][1], )
+            df.boxplot(column='P', by=[item], ax=axes[0][1])
             df.boxplot(column='mAP', by=[item], ax=axes[1][0])
             df.boxplot(column='F1', by=[item], ax=axes[1][1])
 
@@ -83,12 +83,12 @@ class data_analyze_two:
         plt.show()
 
 if __name__ == "__main__":
-    # ana2 = data_analyze_two(path1='../gray_warm_result_sean.csv',path2='../gray_result_sean.csv',ana_item=['mAP'])
-    # ana2.kde()
-    #
-    test_item = ['far.data', 'mul.data', 'all.data', 'single_front.data', 'single_side.data']
-    ana_item = ['optimize','tpye','activation','freeze','rect',]
-    ana = data_analyze(path='/media/hkuit164/WD20EJRX/yolov3-channel-and-layer-pruning/gray_test_result.csv',ana_item=ana_item,target_item='')
-    ana.boxplot(ana_item)
+    ana2 = data_analyze_two(path1='../gray_warm_result_sean.csv',path2='../gray_result_sean.csv',ana_item=['mAP'])
+    ana2.kde()
+
+    # test_item = ['far.data', 'mul.data', 'all.data', 'single_front.data', 'single_side.data']
+    # ana_item = ['optimize','tpye','activation','freeze','rect',]
+    # ana = data_analyze(path='/media/hkuit164/WD20EJRX/yolov3-channel-and-layer-pruning/gray_test_result.csv',ana_item=ana_item,target_item='')
+    # ana.boxplot(ana_item)
     # for items in test_item:
     #     ana.test_means_dataset(items)
